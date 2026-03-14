@@ -133,7 +133,7 @@ BEGIN
 			CASE WHEN sls_due_dt= 0 OR LEN(sls_due_dt) != 8 THEN NULL
 				ELSE CAST(CAST(sls_due_dt AS VARCHAR) AS DATE)
 			END AS sls_due_dt,
-			CASE WHEN sls_sales IS NULL OR sls_sales <= 0 OR sls_price != sls_quantity * ABS(sls_price)
+			CASE WHEN sls_sales IS NULL OR sls_sales <= 0 OR sls_sales != sls_quantity * ABS(sls_price)
 				THEN sls_quantity * ABS(sls_price)
 				ELSE sls_sales
 			END AS sls_sales,
