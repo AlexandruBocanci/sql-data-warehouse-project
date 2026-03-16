@@ -101,6 +101,8 @@ Data-Warehouse-Analytics-Project/
 |       |-- ddl_silver.sql
 |       `-- proc_load_silver.sql
 |-- tests/
+|  |  `-- quality_checks_silver.sql
+|  |  `-- quality_checks_gold.sql
 |-- init_database.sql
 |-- LICENSE
 `-- README.md
