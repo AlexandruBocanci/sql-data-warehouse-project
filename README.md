@@ -75,19 +75,36 @@ These views form a star-schema-style analytical model for reporting and SQL anal
 ## Repository Structure
 
 ```text
-Data Warehouse/
-|-- README.md
-|-- DDL Bronze Layer.sql
-|-- Stored Procedure Insert CSVs into Bronze tables.sql
-|-- Checking Data Quality in the Bronze Layer.sql
-|-- DDL Silver Layer.sql
-|-- Inserting Clean Data From Bronze to Silver Layer.sql
-|-- Silver Data Quality Checks.sql
-|-- View gold.dim_customers.sql
-|-- View gold.dim_products.sql
-|-- View gold.fact_sales.sql
-`-- Draw.io Project Plan/
-    `-- DWH Project Plan.drawio
+Data-Warehouse-Analytics-Project/
+|-- datasets/
+|   |-- source_crm/
+|   |   |-- cust_info.csv
+|   |   |-- prd_info.csv
+|   |   `-- sales_details.csv
+|   `-- source_erp/
+|       |-- CUST_AZ12.csv
+|       |-- LOC_A101.csv
+|       `-- PX_CAT_G1V2.csv
+|-- docs/
+|   |-- Each layer's plan.png
+|   |-- Gold Layer Relations.png
+|   |-- Project Plan.png
+|   `-- data_catalog.md
+|-- scripts/
+|   |-- bronze/
+|   |   |-- ddl_bronze.SQL
+|   |   `-- proc_load_bronze.sql
+|   |-- gold/
+|   |   `-- gold_ddl.sql
+|   `-- silver/
+|       |-- data_qulity_checks
+|       |-- ddl_silver.sql
+|       `-- proc_load_silver.sql
+|-- tests/
+|-- init_database.sql
+|-- LICENSE
+`-- README.md
+
 ```
 
 ## Key Components
